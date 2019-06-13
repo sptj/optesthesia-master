@@ -1,13 +1,8 @@
 import numpy
 from PIL import Image
 import torch
-def get_image_wh_tuple(image):
-    if isinstance(image,numpy.ndarray):
-        w,h,c=image.shape
-    if isinstance(image,Image.Image):
-        w,h=image.size
-    if
-    return (w,h)
+import matplotlib.pyplot
+
 
 def resize(img, boxes, size, max_size=1024):
     '''Resize the input PIL image to the given size.
